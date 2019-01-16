@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		margin: 0 auto;
+	}
+	header{
+		width:1920px;
+		margin:0 auto;
+		height: 100px;
+	}
+	header img{
+		width:150px;
+		height:60px;
+		padding:20px;
+		margin-left:360px;
+		border-left: 1px solid lightgray;
+		border-right: 1px solid lightgray;
+		float: left;
+	}
+	/*-----------------------------------------------------------------------------메인메뉴&서브메뉴*/
+	header #main_menu{
+		width:800px;
+		height:80px;
+		float: left;
+		margin-left: 75px;
+	}
+	header #main_menu > ul{
+		text-align: center;
+	}
+	header #main_menu > ul > li{
+		display: inline;
+		line-height: 100px;
+	}
+	header #main_menu > ul > li > a{
+		color:black;
+		width:180px;
+		font-size:18px;
+		font-weight:bold;
+		text-decoration: none;
+		display:block;
+		float: left;
+	}
+	body header .submenu{
+		display:none;
+		background-color:white;
+		position:absolute;
+		top:102px;
+		left:0;
+		width: 1920px;
+	}
+	header .submenu ul li{
+		width:180px;
+		float: left;
+		line-height: 20px;
+	}
+	header .submenu a{
+		font-size: 16px;
+		text-decoration: none;
+		color:gray;
+	}
+	#main_menu > ul >li:hover .submenu{
+		display: block;
+	}
+	/*-----------------------------------------------------------------------------사이드메뉴*/
+	header #side_menu{
+		float: right;
+		margin-right: 360px;
+	}
+	header #side_menu ul{
+		list-style: none;
+		text-align: center;
+	}
+	header #side_menu a{
+		color:black;
+		text-decoration: none;
+		display: block;
+		padding:15px;
+		border-top: 0.5px solid lightgray;
+		border-right: 0.5px solid lightgray;
+		border-left: 0.5px solid lightgray;
+	}
+	/*-----------------------------------------------------------------------------메인포스터*/
+	section{
+		width:1920px;
+		clear:both;
+		margin:0 auto;
+		text-align:center;
+		background:url(images/bg.png) no-repeat;
+		height: 650px;
+		border-top:2px solid lightgray;
+	}
+	section #circle_wrapper{
+		width:1200px;
+		height: 600px;
+		margin:30px auto;
+		position: relative;
+	}
+	section article{
+		margin: 30px;
+	}
+	section .small_circle{
+		width:300px;
+		height: 300px;
+		border-radius: 150px;
+	}
+	section article:FIRST-CHILD{
+		position: absolute;
+		left:10px;
+		bottom:130px;
+		background:url("images/poster2.jpg") ;
+		background-size: 300px; 
+	}
+	section .big_circle{
+		width:400px;
+		height: 400px;
+		background:url(images/ballet.jpg) no-repeat center;
+		background-size:cover;
+		border-radius:200px;
+		border:3px solid #FA116A;
+		position: absolute;
+		left:370px;
+		bottom:110px;
+		transition:all 0.7s;
+	}
+	section #halloween{
+		position: absolute;
+		right:10px;
+		bottom:130px;
+		background:url("images/poster.jpg");
+		background-size: 300px; 
+	}
+	/*---------------------------------------------------------------------------poster_title*/
+	#circle_wrapper #mozart{
+		position: absolute;
+		bottom: 80px;
+		left:125px;
+		color:white;
+	}
+	#circle_wrapper h1{
+		position: absolute;
+		bottom:60px;
+		left:530px;
+		color:white;
+	}
+	#circle_wrapper h2:LAST-CHILD{
+		position: absolute;
+		bottom: 80px;
+		right: 90px;
+		color:white;
+	}
+	/*---------------------------------------------------------------------------poster:hover*/
+	section .big_circle:hover{
+		border:3px solid #06E6D4;
+	}
+	/*-----------------------------------------------------------------------------big_square*/
+	#container{
+		clear:both;
+		width:1200px;
+		margin: 0 auto;
+	}
+	#container #wrapper{
+		text-align: center;
+		padding-left: 10px;
+		width:1190px;
+		height: 270px;
+		position: relative;
+		margin-top: 40px;
+	}
+	#container #wrapper .big_square{
+		width:300px;
+		height: 200px;
+		float: left;
+		padding: 35px;
+	}
+	#container #wrapper .big_square img{
+		margin: 30px;
+	}
+	#container #wrapper .big_square p{
+		font-size: 13px;
+	}
+	#container #wrapper #big_square1{
+		background-color:#9E816A;
+		background-size: cover;
+		position: absolute;
+		left: 0;
+		transition:all 1s;
+	}
+	#container #wrapper #big_square2{
+		border: 1px solid lightgray;
+		position: absolute;
+		left: 415px;
+		color:gray;
+		transition:all 1s;
+	}
+	#container #wrapper #big_square2 h3{
+		color:black;
+	}
+	#container #wrapper #big_square3{
+		background:url("images/yellow.jpg") no-repeat;
+		background-size:370px 270px;
+		position: absolute;
+		right: 0;
+		overflow: hidden;
+		transition:all 1s;
+	}
+	/*--------------------------------------------------------------------big_square:hover*/
+	#container #wrapper #big_square1:hover{
+		background-color: #A58484;
+		color:white;
+	}
+	#container #wrapper #big_square2:hover{
+		background-color: #F9F7ED;
+	}
+	#container #wrapper #big_square2:hover h3{
+		color:#44F8C7;
+	}
+	#container #wrapper #big_square3:hover{
+		background-size: 400px 300px;
+	}
+	/*-----------------------------------------------------------------------------포토갤러리*/
+	#container #gallery{
+		clear:both;
+		width:1200px;
+		height: 550px;
+		margin:30px auto;
+		background-color: #F7F7F3;
+		text-align: center;
+		position: relative;
+	}
+	#container #gallery h1{
+		letter-spacing: 20px;
+		margin-top: 10px;
+		position: absolute;
+		top:30px;
+		left: 350px;
+	}
+	#container #gallery > p{
+		position: absolute;
+		top:100px;
+		left: 420px;
+	}
+	#container #gallery .small_square{
+		width:250px;
+		height: 300px;
+		float: left;
+		margin: 10px;
+		padding:10px;
+		background-color: white;
+		position: relative;
+		left:20px;
+		top:150px;
+		transition:all 1s;
+	}
+	#container #gallery .small_square p{
+		font-size: 14px;
+		margin-top: 20px;
+	}
+	#container #gallery img{
+		width: 240px;
+		height: 180px;
+		position: absolute;
+		bottom:30px;
+		left: 14px;
+	}
+	/*-----------------------------------------------------------------------gallery:hover*/
+	#container #gallery .small_square:hover{
+		background-color: #9E9B92;
+	}
+	#container #gallery .small_square:hover p{
+		color:white;
+	}
+	/*------------------------------------------------------------------------------news*/
+	#aside1{
+		float: left;
+		margin: 30px;
+		width:450px;
+	}
+	#aside1 h2{
+		margin-bottom: 20px;
+	}
+	#aside1 li{
+		border-bottom: 1px solid gray;
+		line-height: 35px;
+	}
+	#aside1 li a{
+		text-decoration: none;
+		font-weight:bold;
+		font-size: 14px;
+		color:black;
+	}
+	#aside1 li .date{
+		font-size: 12px;
+		float: right;
+		font-weight: normal;
+		color:gray;
+	}
+	#aside2{
+		float: right;
+		text-align: center;
+		width:690px;
+		margin-top: 20px;
+	}
+	#aside2 .white_square{
+		width:300px;
+		height: 220px;
+		border: 1px solid #9E9B92;
+		padding: 10px;
+		margin: 10px;
+		transition:all 1s;
+	}
+	#aside2 .white_square h3{
+		margin-top: 20px;
+	}
+	#aside2 .white_square p{
+		color:#9E9B92;
+		margin: 20px;
+	}
+	#aside2 article:FIRST-CHILD{
+		float: right;
+	}
+	#aside2 article:LAST-CHILD{
+		float: right;
+	}
+	/*-----------------------------------------------------------------------bottom_square:hover*/
+	#aside2 .white_square:hover{
+		background-color: #9E9B92;
+	}
+	#aside2 .white_square:hover h3{
+		color:#9FF0FB;
+	}
+	#aside2 .white_square:hover p{
+		color:white;
+	}
+	/*------------------------------------------------------------------------------bottom_menu*/
+	#bottom_menu{
+		clear:both;
+		height: 50px;
+		background-color: #8A867A;
+		padding-left: 350px;
+	}
+	#bottom_menu ul li{
+		display: inline;
+		padding: 10px;
+	}
+	#bottom_menu ul li a{
+		text-decoration: none;
+		line-height:50px;
+		color:white;
+		font-size: 15px;
+		transition:all 0.7s;
+	}
+	/*-----------------------------------------------------------------------bottom_menu:hover*/
+	#bottom_menu ul li a:hover{
+		color:orange;
+	}
+	/*----------------------------------------------------------------------------------footer*/
+	footer{
+		clear: both;
+		background-color: #ECEBE8;
+		height: 100px;
+	}
+	footer img{
+		float: left;
+		margin: 10px;
+	}
+	footer img:FIRST-CHILD {
+		padding-left: 340px;
+		padding-top: 20px;
+	}
+	footer #footer_p{
+		width:500px;
+		float: left;
+		padding-left:80px;	
+	}
+	footer #footer_p p{
+		font-size:14px;
+		font-weight: bold;
+		padding-top: 12px;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<img src="images/logo.png" alt="logo">
+		<nav id="main_menu">
+			<ul>
+				<li><a href="#">천마아트센터</a>
+					<ul class="submenu">
+						<li><a href="#">인사말</a></li>
+						<li><a href="#">조직도</a></li>
+						<li><a href="#">연혁</a></li>
+						<li><a href="#">CI소개</a></li>
+						<li><a href="#">찾아오시는 길</a></li>
+						<li><a href="#">주차안내</a></li>
+					</ul>
+				</li>
+				<li><a href="#">공연전시안내</a>
+					<ul class="submenu">
+						<li><a href="#">공연일정</a></li>
+						<li><a href="#">예매안내</a></li>
+						<li><a href="#">좌석배치도</a></li>
+						<li><a href="#">관람예절</a></li>
+					</ul>
+				</li>
+				<li><a href="#">대관안내</a>
+					<ul class="submenu">
+						<li><a href="#">대관시설</a></li>
+						<li><a href="#">대관규약</a></li>
+						<li><a href="#">대관절차</a></li>
+						<li><a href="#">대관신청</a></li>
+						<li><a href="#">대관료</a></li>
+					</ul>
+				</li>
+				<li><a href="#">고객지원</a>
+					<ul class="submenu">
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">포토갤러리</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<nav id="side_menu">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">즐겨찾기 추가</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<div id="circle_wrapper">
+			<article class="small_circle"></article>
+			<h2 id="mozart">Mozart<br>2018.10.04</h2>
+			<article class="big_circle"></article>
+			<h1>Ballet<br>2017.07.04</h1>
+			<article class="small_circle" id="halloween"></article>
+			<h2>Halloween Event<br>2018.10.31</h2>
+		</div>
+	</section>
+	<div id="container">
+		<div id="wrapper">
+			<article class="big_square" id="big_square1">
+				<h3>공연/전시안내</h3>
+				<img src="images/icon01.png" alt="icon">
+				<p>
+				천마아트센터에서 진행하는 전체 공연 및<br>
+				전시일정들과 자세한 상세내용들을 알려드립니다.
+				</p>
+			</article>
+			<article class="big_square" id="big_square2">
+				<h3>좌석배치</h3>
+				<img src="images/icon02.png" alt="icon">
+				<p>
+				좌석예약시 무대장면이 어떻게 보일지~<br>
+				좌석배치도를 미리 체크해보시길 바랍니다.
+				</p>
+			</article>
+			<article class="big_square" id="big_square3">
+				<h3>후원회원 가입안내</h3>
+				<p>
+				문화와 예술을 사랑하고 천마아트센터를<br>
+				아끼시는 귀하를 후원으로 모시고자 합니다.
+				</p>
+				<img>
+			</article>
+		</div>
+		<div id="gallery">
+			<h1>PHOTO GALLERY</h1>
+			<p>천마아트센터의 공연 및 전시사진들을 모았습니다.</p>
+			<article class="small_square">
+				<p>2018 음악이 흐르는 캠퍼스 1회</p>
+				<img src="images/concert.jpg" alt="concert">
+			</article>
+			<article class="small_square">
+				<p>2013 수요음악회(5) 정은주의 작은 음악회</p>
+				<img src="images/concert2.jpg" alt="concert">
+			</article>
+			<article class="small_square">
+				<p>2013 수요음악회(4) 콘서트콰이어</p>
+				<img src="images/concert3.jpg" alt="concert">
+			</article>
+			<article class="small_square">
+				<p>2013 수요음악회(3) 힐링콘서트</p>
+				<img src="images/concert4.jpg" alt="concert">
+			</article>
+		</div>
+		<div id="aside1">
+			<h2>뉴스 & 공지사항</h2>
+			<ul>
+				<li><a href="#">천마아트센터와 음악대학이 선물하는 작은음악회 <span class="date">2018.9.28</span></a></li>
+				<li><a href="#">2018 천마아트센터 하반기 정기대관 신청공고 <span class="date">2018.4.18</span></a></li>
+				<li><a href="#">공연홍보대사 제8기 최종합격자 발표 및 오리엔테이션 안내  <span class="date">2018.3.28</span></a></li>
+				<li><a href="#">천마아트센터 공연홍보대사(House Usher)제8기 서류합격자 <span class="date">2018.3.08</span></a></li>
+				<li><a href="#">천마아트센터 공연홍보대사(House Usher)제8기 선발 공고 <span class="date">2018.3.02</span></a></li>
+			</ul>
+		</div>
+		<div id="aside2">
+			<article class="white_square">
+				<h3>대관시설안내</h3>
+				<p>
+				천마아트센터에 대관시설들을<br>
+				자세히 안내합니다.
+				</p>
+				<img src="images/icon03.png" alt="icon">
+			</article>
+			<article class="white_square">
+				<h3>대관시설안내</h3>
+				<p>
+				천마아트센터에 대관시설들을<br>
+				자세히 안내합니다.
+				</p>
+				<img src="images/icon04.png" alt="icon">
+			</article>
+		</div>
+	</div>
+	<nav id="bottom_menu">
+		<ul>
+			<li><a href="#">오시는 길</a></li>
+			<li><a href="#">공연일정</a></li>
+			<li><a href="#">대관시설</a></li>
+			<li><a href="#">대관신청</a></li>
+		</ul>
+	</nav>
+	<footer>
+		<img src="images/logo_f.png" alt="logo">
+		<img src="images/logo.png" alt="logo">
+		<div id="footer_p">
+		<p>천마아트센터 / 우편번호 : 38541 주소 : 경상북도 경산시 대학로 280
+		영남대학교 천마아트센터 대표전화 : 053)810 - 1527~8 / FAX : 053)810-4800</p>
+		<p>Copyright(C) 2009 천마아트센터. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+</html>

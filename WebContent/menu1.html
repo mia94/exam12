@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		font-size: 20px;
+		background-color: #eee; /*각각의 rgb자리의 두글자가 같을때 한글자로 줄일수 있다*/
+		font-family: Georgia, sans-serif;
+		padding: 30px;
+	}
+	nav{
+		width:250px;
+		float: left;
+	}
+	section{
+		float: left;
+		width: 700px;
+		margin-left: 70px;
+	}
+	nav ul{
+		list-style: none;
+	}
+	nav ul li{
+		width: 100%;
+		height: 30px;
+		background-color: #2175bc;
+		line-height: 30px;
+		padding: 5px;
+		border-left: 10px solid #1958b7;
+		border-right: 10px solid #508fc4;
+		margin: 1px; /*border bottom을 주면 모퉁이가 흐리게 나옴*/
+	}
+	nav a{
+		color:white;
+		text-decoration: none;
+	}
+	nav li:hover{ /*a태그에 hover을 주면 텍스트부분만 변화*/
+		font-size: 22px;
+		text-decoration: underline;
+		background-color: #6cf;
+	}
+</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Research</a></li>
+			<li><a href="#">Publication</a></li>
+			<li><a href="#">People</a></li>
+			<li><a href="#">Patents</a></li>
+			<li><a href="#">Board</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</nav>
+	<section>
+		<h1>Welcome to Our Laboratory!</h1>
+		<img src="images/laboratory.jpg" alt="laboratory">
+	</section>
+</body>
+</html>

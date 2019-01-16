@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{margin: 0; padding: 0;}
+	ul{
+		list-style: none;
+	}
+	a{
+		text-decoration: none;
+	}
+	/*-----------메뉴1-------------*/
+	#menu1_wrap{
+		width:960px;
+		margin: 0 auto;
+		background-color: red; /*높이는 배경색깔이 들어가는 태그에 주어야 한다*/
+		height: 40px;
+	}
+	#menu1_wrap ul li{
+		width:25%;
+		display: inline;
+		float: left;
+		line-height: 40px;
+		text-align: center;
+	}
+	#menu1_wrap a{ /*인라인태그는 width가 설정되지 않음*/
+		color:white;
+		border: 1px solid white;
+		display: block;
+	}
+	#menu1_wrap a:hover{
+		background-color: black;
+	}
+	/*---------메뉴2------------*/
+	#menu2_wrap{
+		width:960px;
+		margin: 0 auto;
+		background-color: red;
+		height: 40px;
+		margin-top: 70px;
+	}
+	#menu2_wrap ul{
+		width:60%;
+		margin: 0 auto; /*ul태그도 블락태그기 때문*/
+	}
+	#menu2_wrap li{
+		width:25%;
+		float: left;
+		display: inline;
+		line-height: 40px;
+		text-align: center;
+	}
+	#menu2_wrap a{
+		color:white;
+		border:white 1px solid;
+		display: block;
+	}
+	#menu2_wrap a:HOVER {
+		background-color: black;
+	}
+	/*---------메뉴3-----------*/
+	#menu3_wrap{
+		margin-top:60px;
+		width:100%;
+		background-color: pink;
+	}
+	#menu3_wrap > ul{
+		width:50%;
+		margin: 0 auto;
+		height: 40px;
+	}
+	#menu3_wrap > ul > li{
+		display: inline;
+		width:25%;
+		float: left;
+		text-align: center;
+		position: relative;
+	}
+	#menu3_wrap >ul >li:HOVER .submenu{ /*li에 마우스를 올리면 서브메뉴가 나타남*/
+		display: block;
+	}
+	#menu3_wrap .submenu{
+		position: absolute;
+		left:0;
+		top:40px;
+		width: 100%;
+		display: none; /*화면에서 보이지 않도록*/
+	}
+	#menu3_wrap .submenu li{
+		background-color: pink;
+	}
+	#menu3_wrap a{
+		color:black;
+		text-decoration: none;
+		line-height: 40px;
+		display: block;
+		border:white solid 1px;
+	}
+	#menu3_wrap a:hover{
+		background-color: black;
+		color:white;
+	}
+	#test{
+		clear: both;
+	}
+	
+</style>
+</head>
+<body>
+	<div id="menu1_wrap">
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a></li>
+			<li><a href="#">메뉴3</a></li>
+			<li><a href="#">메뉴4</a></li>
+		</ul>
+	</div>
+	<div id="menu2_wrap">
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a></li>
+			<li><a href="#">메뉴3</a></li>
+			<li><a href="#">메뉴4</a></li>
+		</ul>
+	</div>
+	<div id="menu3_wrap">
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a>
+				<ul class="submenu">
+					<li><a href="#">메뉴2-1</a></li>
+					<li><a href="#">메뉴2-2</a></li>
+					<li><a href="#">메뉴2-3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">메뉴3</a>
+				<ul class="submenu">
+					<li><a href="#">메뉴3-1</a></li>
+					<li><a href="#">메뉴3-2</a></li>
+					<li><a href="#">메뉴3-3</a></li>
+					<li><a href="#">메뉴3-4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">메뉴4</a></li>
+		</ul>
+	</div>
+	
+	<div id="test">
+		skdlwjewjriutvn iejriejr'awckejtiewj bifjgieljtwieljtd,xmfjwivcejcf<br>
+		<img src="images/laboratory.jpg" alt="laboratory">
+	</div>
+</body>
+</html>

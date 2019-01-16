@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		background-color: #f2f0f0;
+	}
+	header{
+		width:960px;
+		margin: 10px auto;
+		height: 80px;
+		position: relative;
+	}
+	header img{
+		position: absolute;
+		left: 0;
+		bottom:10px;
+	}
+	header #top_menu{
+		position:absolute;
+		right:0;
+		bottom:10px;
+	}
+	header ul li{
+		display: inline;
+	}
+	header ul li a{
+		text-decoration: none;
+		color:black;
+		font-size: 12px;
+	}
+	#main_menu{
+		background-color: #4e4c4d;
+		height: 50px;
+	}
+	#main_menu ul{
+		width:960px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	#main_menu > ul > li{
+		display: inline;
+		float:left;
+		line-height:50px;
+		width:192px;
+		position: relative;
+	}
+	#main_menu > ul > li > a{
+		color:white;
+		text-decoration: none;
+		display: block;
+	}
+	#main_menu .submenu{
+		display: none;
+		text-align:center;
+		position: absolute;
+		top:50px;
+		left: 0px;
+		background-color: #4e4c4d;
+		width:192px;
+	}
+	#main_menu .submenu a{
+		text-decoration: none;
+		color:white;
+		display: block;
+	}
+	#main_menu ul li a:hover{
+		background-color: lightgray;
+		color:black;
+	}
+	#main_menu >ul >li:hover .submenu{
+		background-color: #4e4c4d;
+		color:white;
+		display: block;
+		list-style: none;
+	}
+	section{
+		width:960px;
+		margin:30px auto;
+		text-align:center;
+		clear: both;
+	}
+	section img{
+		margin: 10px;
+		width:100%;
+	}
+</style>
+</head>
+<body>
+	<header>
+		<img src="images/logo2.gif" alt="logo">
+		<nav id="top_menu">
+			<ul>
+				<li><a href="#">로그인 |</a></li>
+				<li><a href="#">회원가입 |</a></li>
+				<li><a href="#">마이페이지 |</a></li>
+				<li><a href="#">주문배송 조회 |</a></li>
+				<li><a href="#">장바구니 |</a></li>
+				<li><a href="#">이용안내 |</a></li>
+				<li><a href="#">고객센터 |</a></li>
+			</ul>
+		</nav>
+	</header>
+	<nav id="main_menu">
+		<ul>
+			<li><a href="#">다연아트 소개</a>
+				<ul class="submenu">
+					<li><a href="#">소개1</a></li>
+					<li><a href="#">소개2</a></li>
+					<li><a href="#">소개3</a></li>
+					<li><a href="#">소개4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">상품 Q & A</a>
+				<ul class="submenu">
+					<li><a href="#">상품1</a></li>
+					<li><a href="#">상품2</a></li>
+					<li><a href="#">상품3</a></li>
+					<li><a href="#">상품4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">시안 확인</a>
+				<ul class="submenu">
+					<li><a href="#">시안 확인1</a></li>
+					<li><a href="#">시안 확인2</a></li>
+					<li><a href="#">시안 확인3</a></li>
+					<li><a href="#">시안 확인4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">고객 갤러리</a>
+				<ul class="submenu">
+					<li><a href="#">고객 갤러리1</a></li>
+					<li><a href="#">고객 갤러리2</a></li>
+					<li><a href="#">고객 갤러리3</a></li>
+					<li><a href="#">고객 갤러리4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">공지사항</a></li>
+		</ul>
+	</nav>
+	<section>
+		<h1>Welcome to Our Laboratory!</h1>
+		<img src="images/laboratory.jpg" alt="laboratory">
+	</section>
+</body>
+</html>

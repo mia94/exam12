@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<title>Insert title here</title>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+/*pc화면*/
+@media all and (min-width:768px){
+	header{
+		width:100%;
+		height:90px;
+		background-color:rgba(0,0,0,0.7); 
+		float: left;
+		position: fixed;
+	}
+	header #logo{
+		float: left;
+		margin: 10px;
+		padding-left: 10px;
+	}
+	header #menu{
+		display: none;
+	}
+	header p{
+		font-family: '궁서';
+		color:white;
+		text-shadow: 1px 1px #ccc;
+		float: left;
+		line-height: 90px;
+	}
+	header nav{
+		float: right;
+		margin-right: 50px;
+		display: block;
+	}
+	header nav ul li{
+		display: inline;
+		list-style: none;
+	}
+	header nav ul li a{
+		color:white;
+		text-decoration: none;
+		font-family: Roboto, '굴림';
+		line-height: 90px;
+		margin: 10px;
+	}
+	#main{
+		width:100%;
+	}
+	#main img{
+		width: 100%;
+	}
+	
+	#news h1{
+		font-size: 3rem;
+		text-decoration: underline;
+		text-align: center;
+		margin: 10px;
+	}
+	#news div{
+		width:1024px;
+		margin: 10px auto;
+	}
+	#news div img{
+		padding: 3px;
+	}
+	#news div #car1{
+		float: left;
+	}
+	#news div #car2{
+		float: right;
+	}
+	#news div #car3{
+		float: left;
+	}
+	#news div #car4{
+		float: left;
+	}
+	footer{
+		clear:both;
+		background-color: black;
+	}
+	footer p{
+		color:white;
+		height: 60px;
+		text-align: center;
+		line-height: 60px;
+	}
+}
+/*휴대폰 세로영역*/
+@media all and (max-width:767px){
+	header{
+		width:100%;
+		height: 50px;
+		background-color: black;
+	}
+	header #logo{
+		display: none;
+	}
+	header #menu{
+		width:30px;
+		height: 30px;
+		position: absolute;
+		top:10px;
+		left:10px;
+	}
+	header p{
+		font-size: 20px;
+		font-family: '굴림';
+		color:white;
+		line-height: 50px;
+		text-align: center;
+		font-weight: bold;
+	}
+	nav ul{
+		width:100%;
+		height:100%;
+		position: absolute;
+		top:50px;
+		background-color: rgba(0,0,0,0.7);
+	}
+	nav ul li{
+		width:100%;
+		line-height: 40px;
+		border-bottom: 1px solid white;
+		text-align: center;
+	}
+	nav ul li a{
+		color:white;
+		line-height: 40px;
+		text-decoration: none;
+	}
+	#main{
+		width:100%;
+		background: url("images/main_img2.jpg") 100%;
+		background-size:cover;
+		height: 245px;
+	}
+	#main img{
+		display: none;
+	}
+	#news{
+		width: 90%;
+		margin: 0px auto;
+		/*overflow: hidden;*/
+	}
+	#news h1{
+		text-align: center;
+		margin: 10px;
+	}
+	#news img{
+		text-align: center;
+	}
+	#news #car1{
+		width:100%;
+	}
+	#car3, #car4{
+		float: left;
+		width:50%;
+	}
+	#news #car2{
+		display: none;
+	}
+	footer{
+		clear: both;
+		background-color: black;
+		height:50px;
+		/*margin-top: 10px;*/
+	}
+	footer{
+		color:white;
+		text-align: center;
+		line-height: 50px;
+	}
+}
+</style>
+</head>
+<body>
+	<header>
+		<img src="images/logo4.png" alt="logo" id="logo">
+		<img src="images/menu.png" alt="menu" id="menu">
+		<p>Mercedes-Benz</p>
+		<nav id="menu_list">
+			<ul>
+				<li><a href="#">MODELS</a></li>
+				<li><a href="#">BRAND</a></li>
+				<li><a href="#">OWNERSHIP</a></li>
+				<li><a href="#">EXPERINCE</a></li>
+				<li><a href="#">STORE</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="main">
+		<img src="images/main_img.jpeg" alt="main">
+	</section>
+	<section id="news">
+		<h1>NEWS</h1>
+		<div>
+			<img src="images/car_1.jpg" alt="car1" id="car1">
+			<img src="images/car_11.jpg" alt="car11" id="car2">
+			<img src="images/car_3.jpg" alt="car3" id="car3">
+			<img src="images/car_4.jpg" alt="car4" id="car4">
+		</div>
+	</section>
+	<footer>
+		<p>Copyright 우선미 version 1.0</p>
+	</footer>
+</body>
+</html>

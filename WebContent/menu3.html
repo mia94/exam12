@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		margin: 0 auto;
+	}
+	#menu_wrap{
+		background-color: pink;
+		margin-top:60px;
+		text-align: center;
+		height: 40px;
+	}
+	#menu_wrap ul{
+		width:60%;
+		margin: 0 auto;
+	}
+	#menu_wrap > ul > li{
+		display: inline;
+		width:25%;
+		float: left;
+		line-height: 40px;
+		position: relative;
+	}
+	#menu_wrap ul > li a{
+		display: block;
+		border:1px solid white;
+		text-decoration: none;
+		color:black;
+	}
+	#menu_wrap ul > li a:hover{
+		color:white;
+		background-color: black;
+	}
+	#menu_wrap .submenu{
+		display: none;
+		position: absolute;
+		left:0;
+		top:40px;
+		background-color: pink;
+		width:100%;
+	}
+	#menu_wrap .submenu li:hover{
+		background-color: black;
+	}
+	#menu_wrap > ul > li:hover .submenu{
+		display: block;
+		list-style: none;
+	}
+	#test{
+		clear: both;
+	}
+</style>
+</head>
+<body>
+	<div id="menu_wrap">
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a>
+				<ul class="submenu">
+					<li><a href="#">메뉴2-1</a></li>
+					<li><a href="#">메뉴2-2</a></li>
+					<li><a href="#">메뉴2-3</a></li>
+				</ul>
+			</li>
+			<li><a href="#">메뉴3</a>
+				<ul class="submenu">
+					<li><a href="#">메뉴3-1</a></li>
+					<li><a href="#">메뉴3-2</a></li>
+					<li><a href="#">메뉴3-3</a></li>
+					<li><a href="#">메뉴3-4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">메뉴4</a></li>
+		</ul>
+	</div>
+	
+	<div id="test">
+		skdlwjewjriutvn iejriejr'awckejtiewj bifjgieljtwieljtd,xmfjwivcejcf<br>
+		<img src="images/laboratory.jpg" alt="laboratory">
+	</div>
+</body>
+</html>
